@@ -17,7 +17,7 @@ class GetPricing extends ACommand
     {
         return [
             'ProductType'     => 'DOMAIN',
-            'ProductCategory' => null,
+            'ProductCategory' => 'DOMAINS',
         ];
     }
 
@@ -26,8 +26,11 @@ class GetPricing extends ACommand
      */
     protected function _postDispatch()
     {
-        foreach ($this->_response->UserGetPricingResult->attributes() as $key => $value) {
-            $this->data[$key] = (string) $value;
+        foreach ($this->_response->UserGetPricingResult->ProductType->ProductCategory->Product->Price as $prices) {
+            $data = array();
+            foreach ($prices->attributes() as $key => $value)
+                $data[$key] = (string) $value;
+            $this->data[] = $data;
         }
     }
 
