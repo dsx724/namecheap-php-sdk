@@ -1,11 +1,16 @@
 {
-    "name": "coldturkeygroup/namecheap-php-sdk",
+    "name": "dsx724/namecheap-php-sdk",
     "type": "library",
     "description": "Namecheap API",
     "keywords": ["api","namecheap"],
-    "homepage": "https://github.com/coldturkeygroup/namecheap-php-sdk",
+    "homepage": "https://github.com/dsx724/namecheap-php-sdk",
     "license": "Apache-2.0",
     "authors": [
+        {
+            "name": "Da Xue",
+            "email": "da@lessconfused.com",
+            "role": "Developer"
+        },
         {
             "name": "The Cold Turkey Group",
             "email": "support@coldturkeygroup.com",
